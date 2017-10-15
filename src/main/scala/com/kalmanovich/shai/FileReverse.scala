@@ -17,6 +17,8 @@ class FileReverse {
   private val wordCountMap: mutable.HashMap[String, Int] = scala.collection.mutable.HashMap.empty[String, Int]
 
 
+
+
   def startReadingFile(filename: String) : Unit = {
     log.info(s"Going to start reading from file $filename")
     val source = io.Source.fromFile(filename)
