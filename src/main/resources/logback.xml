@@ -1,0 +1,15 @@
+<configuration scan="true" scanPeriod="1 minutes">
+	<conversionRule conversionWord="coloredLevel" converterClass="play.api.Logger$ColoredLevel" />
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%level - %date - [%mdc{X-sessionId}] %logger{15} - %message%n%xException{5}
+			</pattern>
+		</encoder>
+	</appender>
+
+	<Root level="DEBUG">
+		<appender-ref ref="STDOUT" />
+	</Root>
+
+</configuration>
