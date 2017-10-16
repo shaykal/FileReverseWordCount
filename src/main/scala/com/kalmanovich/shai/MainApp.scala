@@ -6,9 +6,10 @@ package com.kalmanovich.shai
 object MainApp extends App {
 
   override def main(args: Array[String]) : Unit = {
-    val fileName = """F:\scala\workspace\FileReverseWordCount\src\main\resources\SampleTextFile_10kb.txt"""
+    val fileName = "SampleTextFile_1000kb.txt"
 
-    val fr: FileReverse = new FileReverse
+    val fr: FileLogicProcessing = new FileLogicProcessing
+
     fr.startReadingFile(fileName)
   }
 }
