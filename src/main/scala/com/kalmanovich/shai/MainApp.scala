@@ -7,9 +7,10 @@ object MainApp extends App {
 
   override def main(args: Array[String]) : Unit = {
     val fileName = "SampleTextFile_1000kb.txt"
+    val outputFileName = "output.txt"
 
     val fr: FileLogicProcessing = new FileLogicProcessing
 
-    fr.startReadingFile(fileName)
+    fr.startReadingFile(fileName, outputFileName)
   }
 }

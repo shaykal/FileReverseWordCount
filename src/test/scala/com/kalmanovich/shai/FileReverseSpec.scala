@@ -45,22 +45,22 @@ class FileReverseSpec extends FunSuite {
 
   test("removePunctuation should successfully remove . from word that ends with it") {
     val fr: FileLogicProcessing = new FileLogicProcessing
-    val word = "word."
-    val word1Answer = fr.removePunctuation(word)
+    val word = ".word"
+    val word1Answer = fr.removePunctuationAfterReverse(word)
     assert(word1Answer == "word")
   }
 
   test("removePunctuation should successfully remove , from word that ends with it") {
     val fr: FileLogicProcessing = new FileLogicProcessing
-    val word = "word,"
-    val word1Answer = fr.removePunctuation(word)
+    val word = ",word"
+    val word1Answer = fr.removePunctuationAfterReverse(word)
     assert(word1Answer == "word")
   }
 
   test("removePunctuation should successfully NOT remove . if the word doesn't end with it") {
     val fr: FileLogicProcessing = new FileLogicProcessing
     val word = "word@word.com"
-    val word1Answer = fr.removePunctuation(word)
+    val word1Answer = fr.removePunctuationAfterReverse(word)
     assert(word1Answer == "word@word.com")
   }
 }
